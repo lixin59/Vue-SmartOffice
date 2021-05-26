@@ -1,12 +1,24 @@
 <template>
   <div class="box">
     <div class="nullview"></div>
+    <van-form>
+    <van-field
+        v-model="dataNum"
+        center
+        label="数据数量"
+        clearable
+        placeholder="0 ~ 6000"
+        :rules="[
+            { pattern, message: '请输入正确的数字', trigger: 'onBlur' },
+          ]"
+    >
+    </van-field>
     <van-field
       v-model="value"
       center
       label="开始时间"
       clearable
-      placeholder="2020-12-01"
+      placeholder="2021-05-01"
     >
       <template #button>
         <van-button size="small" type="primary" @click="selectData"
@@ -14,6 +26,7 @@
         >
       </template>
     </van-field>
+    </van-form>
     <van-tabs color="#888686" @click="tabClick">
       <van-tab title="温度">
         <div class="line">
@@ -50,10 +63,13 @@ export default {
       flag: true,
       flag1: true,
       value: "2021-05-01",
+      dataNum: '',
+      limit: 6000,
       startTime: "2020-12-01T08:00:35",
       dataL: {},
       dataH: {},
-      dataT: {}
+      dataT: {},
+      pattern: /^([1-9]|[1-9]\d|[1-9]\d{2}|[1-5]\d{3}|6000)$/
     };
   },
   mounted() {
@@ -71,6 +87,8 @@ export default {
     },
     selectData() { // 查询按钮
       let that = this;
+      const dataNums = Number(that.dataNum);
+      that.limit = dataNums;
       that.startTime = that.value + "T08:00:35";
       that.getCharts("temperature","温度","#F60","main");
       that.getCharts("humidity", "湿度", "#1be0e0", "main1");
@@ -82,7 +100,7 @@ export default {
         .getDataPoints(devicesid, {
           datastream_id: id,
           start: that.startTime,
-          limit: 6000,
+          limit: that.limit,
         })
         .done(function (data) {
           console.log("api调用完成，服务器返回data为：", data);
