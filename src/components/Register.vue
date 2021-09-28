@@ -42,35 +42,35 @@
 export default {
   data() {
     return {
-      phone: "",
-      password: ""
+      phone: '',
+      password: ''
     };
   },
   methods: {
     register() {
-      let that =this
-      if (that.phone==''||that.password=='') {
+      const that = this;
+      if (that.phone === '' || that.password === '') {
         that.$toast.fail('用户名或密码不能为空');
-      }else{
-        let arr = [];
+      } else {
+        const arr = [];
         const user = {
-        loginName: that.phone,
-        loginPsd: that.password
+          loginName: that.phone,
+          loginPsd: that.password
         };
         // 添加数据
         arr.push(user);
-        var arrs = JSON.stringify(arr)
+        const arrs = JSON.stringify(arr);
         console.log(arrs);
-        localStorage.setItem('users',arrs);
+        localStorage.setItem('users', arrs);
         // var f = JSON.parse(localStorage.getItem('users'))
         // console.log(f);
         that.$toast.success('注册成功');
       }
     },
     tologin() {
-      this.$router.push("/");
-    },
-  },
+      this.$router.push('/');
+    }
+  }
 };
 </script>
 

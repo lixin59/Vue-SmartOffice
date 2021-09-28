@@ -1,10 +1,8 @@
-import Vue from 'vue'
-import { Button,Field,CellGroup,Form,
-    Tabbar,TabbarItem,Switch,Dialog,Toast,
-    ContactCard,Swipe, SwipeItem ,
-    Tab, Tabs,Tag,
-} from 'vant'
-
+import Vue from 'vue';
+import {
+  Button, Field, CellGroup, Form, Tabbar, TabbarItem, Switch, Dialog, Toast,
+  ContactCard, Swipe, SwipeItem, Tab, Tabs, Tag
+} from 'vant';
 
 Vue.use(Button);
 Vue.use(Field);

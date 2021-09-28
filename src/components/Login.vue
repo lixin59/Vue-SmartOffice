@@ -56,41 +56,40 @@
 export default {
   data() {
     return {
-      phone: "",
-      password: "",
-      pattern: /\d{6}/,
+      phone: '',
+      password: '',
+      pattern: /\d{6}/
     };
   },
   methods: {
     login() {
-      let that = this
-      if (that.phone == "" || that.password == "") {
-        that.$toast.fail("用户名或密码不能为空");
-      }
-      else {
-        var arr = JSON.parse(localStorage.getItem("users"));
+      const that = this;
+      if (that.phone === '' || that.password === '') {
+        that.$toast.fail('用户名或密码不能为空');
+      } else {
+        const arr = JSON.parse(localStorage.getItem('users'));
         for (let e = 0, len = arr.length; e < len; e++) {
           if (
-            arr[e].loginName == that.phone &&
-            arr[e].loginPsd == that.password
+            arr[e].loginName === that.phone &&
+            arr[e].loginPsd === that.password
           ) {
-            that.$toast.success("登录成功");
-            that.$router.push("/home");
+            that.$toast.success('登录成功');
+            that.$router.push('/home');
           } else {
-            that.$toast.fail("账号或密码错误");
-            that.phone = "";
-            that.password = "";
+            that.$toast.fail('账号或密码错误');
+            that.phone = '';
+            that.password = '';
           }
         }
       }
     },
     skip() {
-      this.$router.push("/home");
+      this.$router.push('/home');
     },
     toregister() {
-      this.$router.push("/register");
-    },
-  },
+      this.$router.push('/register');
+    }
+  }
 };
 </script>
 

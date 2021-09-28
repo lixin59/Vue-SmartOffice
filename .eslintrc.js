@@ -24,7 +24,7 @@ module.exports = {
     'brace-style': [2, '1tbs', {
       'allowSingleLine': true
     }], // if while function 后面的{必须与if在同一行，java风格。
-    'camelcase': [2, {
+    'camelcase': [1, {
       'properties': 'always'
     }], // 强制驼峰法命名
     'comma-spacing': [2, {
@@ -108,7 +108,7 @@ module.exports = {
       'allowTemplateLiterals': true
     }], // 强制使用一致的反勾号、双引号或单引号
     'quote-props': 0, // 属性名不限制
-    'semi': [2, 'never'], // 语句强制分号结尾
+    'semi': [2, 'always'], // 语句强制分号结尾
     'semi-spacing': [2, {
       'before': false,
       'after': true
