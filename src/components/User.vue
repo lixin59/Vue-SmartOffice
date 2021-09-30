@@ -4,17 +4,17 @@
     <div class="aboutme">
       <van-contact-card
         type="edit"
-        name="李鑫"
+        name="XX"
         tel="18020922655"
         :editable="false"
       />
     </div>
     <div class="mychat">
       <div class="icons">
-        <img src="../static/icon/QQ.png" alt="" /> 1453287107
+        <img src="../static/icon/QQ.png" alt="" /> xxxxxxx
       </div>
       <div class="icons">
-        <img src="../static/icon/wechat.png" alt="" /> xiaoxinxin59
+        <img src="../static/icon/wechat.png" alt="" /> xxxxxxxx
       </div>
       <div class="icons">
         <img src="../static/icon/github.png" alt="" />
@@ -22,7 +22,7 @@
       </div>
       <div class="icons">
         <img src="../static/icon/csdn.png" alt="" />
-        https://blog.csdn.net/qq_43399210?spm=1001.2101.3001.5113
+        https://blog.csdn.net/qq_43399210
       </div>
     </div>
     <div class="swiper">
