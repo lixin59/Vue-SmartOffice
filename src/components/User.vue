@@ -5,7 +5,7 @@
       <van-contact-card
         type="edit"
         name="XX"
-        tel="18020922655"
+        tel="180xxxxxxxxxxxx"
         :editable="false"
       />
     </div>
