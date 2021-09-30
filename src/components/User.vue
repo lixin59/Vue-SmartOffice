@@ -11,7 +11,7 @@
     </div>
     <div class="mychat">
       <div class="icons">
-        <img src="../static/icon/QQ.png" alt="" /> xxxxxxx
+        <img src="../static/icon/QQ.png" alt="" /> 测试github.dev修改代码
       </div>
       <div class="icons">
         <img src="../static/icon/wechat.png" alt="" /> xxxxxxxx
