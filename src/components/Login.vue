@@ -269,7 +269,7 @@ export default {
   .box1 {
     width: 80%;
     margin: 0 auto;
-    margin-top: 55%;
+     margin-top: 20vh;
   }
 }
 </style>
